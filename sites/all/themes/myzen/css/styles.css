@@ -52,6 +52,9 @@ body {
 .view-first img {
     opacity: 0.8;
     transition: all 0.2s linear;
+    margin: 3px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .view-first .mask {
     opacity: 0;
@@ -91,9 +94,4 @@ body {
 }
 .view-first:hover a.info {
     transition-delay: 0.2s;
-}
-
-.view-first img{
-  margin: 3px;
-  border-radius: 10px;
 }
