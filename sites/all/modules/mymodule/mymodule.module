@@ -1,0 +1,31 @@
+<?php
+function mymodule_menu() {
+    $items['path-to-ajax/%/%'] = array(
+            'access arguments' => array('access content'),
+            'page callback' => 'mymodule_ajax_callback',
+            'page arguments' => array(1,2),
+            'type' => MENU_CALLBACK,
+    );
+    return $items;
+}
+
+function mymodule_ajax_callback($js, $node_id) {
+  $node = node_load($node_id);
+
+  if ($js == 'nojs') {
+    drupal_goto('node/' . $node->nid);
+  }
+
+  // Get the render array for the node, and render it into actual HTML
+  // Here, we use a built in drupal function called node_view to pull out all the information about the node we loaded - this is yet another giant array! But then, we pass that information into a special function, also built into drupal, called render. This translates that array into HTML that we can print on our screen. So, here we've gone from a node object to an array of information about the node, to HTML generated from that array.
+  $build = node_view($node);
+  $html = render($build);
+
+  //Prepare an ajax command to insert the node's HTML into the div wrapper.
+  $commands = array();
+  $commands[] = ajax_command_html('#mymodule-ajax-wrapper', $html);
+
+  //Render the commands into JSON data format and execute them by printing them to the browser.
+  print ajax_render($commands);
+  exit; // Exit intervenes before Drupal continues loading the whole page.
+}
