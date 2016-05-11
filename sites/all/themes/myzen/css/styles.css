@@ -36,17 +36,22 @@ a:hover {
 }
 
 body {
-  background: url('/sites/all/images/portland_skyline.jpg') no-repeat center center fixed;
+  /*background: url('/sites/all/images/portland_skyline.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: grey;
 }
 
 #page {
   background: rgba(0,0,0,0.8);
   border-radius: 20px;
   padding: 30px;
+}
+
+.views-view-grid {
+  margin-left: 20%;
 }
 
 .view-first img {
@@ -57,9 +62,11 @@ body {
     margin-top: 0px;
 }
 .view-first .mask {
-    opacity: 0;
-    background-color: rgba(219,127,8, 0.7);
+    opacity: 1;
+    background-color: rgba(0,0,0, 1);
     transition: all 0.4s ease-in-out;
+    text-align: center;
+    color: green;
 }
 .view-first h2 {
     transform: translateY(-100px);
@@ -83,6 +90,7 @@ body {
 .view-first:hover .mask {
 	opacity: 1;
 }
+
 .view-first:hover h2,
 .view-first:hover p,
 .view-first:hover a.info {
