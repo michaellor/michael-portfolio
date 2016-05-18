@@ -18,12 +18,6 @@
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
     <?php endif; ?>
 
-    <?php if ($site_name || $site_slogan): ?>
-      <div class="header__name-and-slogan" id="name-and-slogan">
-
-      </div>
-    <?php endif; ?>
-
     <?php if ($secondary_menu): ?>
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(
@@ -43,6 +37,10 @@
     <?php print render($page['header']); ?>
 
   </header>
+
+  <div id="name-header">
+      <h4>Michael Lor</h4>
+  </div>
 
   <div id="main">
 

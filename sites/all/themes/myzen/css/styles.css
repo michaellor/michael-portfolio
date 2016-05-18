@@ -50,6 +50,14 @@ body {
   padding: 30px;
 }
 
+#name-header {
+  text-align: center;
+}
+
+h4 {
+  color: red;
+}
+
 .views-view-grid {
   margin-left: 20%;
 }
