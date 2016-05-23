@@ -14,10 +14,6 @@
 
   <header class="header" id="header" role="banner">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
-    <?php endif; ?>
-
     <?php if ($secondary_menu): ?>
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(
@@ -40,6 +36,8 @@
 
   <div id="name-header">
       <h4>Michael Lor</h4>
+      <p>Developer + Designer</p>
+      <p><a href="#project_jump" class="scrollnav">Projects</a></p>
   </div>
 
   <div id="main">
@@ -108,5 +106,7 @@
   <?php print render($page['footer']); ?>
 
 </div>
+
+<div id="project_jump"></div>
 
 <?php print render($page['bottom']); ?>

@@ -44,6 +44,10 @@ body {
   background-color: grey;
 }
 
+#first-time {
+  display: none;
+}
+
 #page {
   background: rgba(0,0,0,0.8);
   border-radius: 20px;
@@ -52,14 +56,15 @@ body {
 
 #name-header {
   text-align: center;
-}
-
-h4 {
   color: red;
 }
 
 .views-view-grid {
   margin-left: 20%;
+}
+
+.views-field-title {
+  text-align: center;
 }
 
 .view-first img {
