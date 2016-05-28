@@ -35,13 +35,12 @@
   </header>
 
   <div id="name-header">
-      <h4>Michael Lor</h4>
+      <h2>Michael Lor</h2>
       <p>Developer + Designer</p>
       <p><a href="#project_jump" class="scrollnav">Projects</a></p>
   </div>
 
   <div id="main">
-
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
